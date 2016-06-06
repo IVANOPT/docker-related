@@ -5,7 +5,7 @@ SCALA_ROOT = os.path.dirname(os.path.abspath(__file__))
 IMAGE_TAG = 'scala'
 
 @task
-@host('localhost')
+@hosts('localhost')
 def build(version):
     image_name = 'localhost:5000/%s:%s' %(IMAGE_TAG, version)
 
